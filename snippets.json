@@ -25,5 +25,21 @@
 			"}"
 		],
 		"description": "Create react function component"
+	},
+	,
+	"React hook": {
+		"prefix": "rhook",
+		"body": [
+			"",
+			"export const ${TM_FILENAME_BASE} = ($1) => {",
+			"",
+			"    $2",
+			"",
+			"    return {",
+			"        $3",
+			"    }",
+			"}"
+		],
+		"description": "Create react hook"
 	}
 }
