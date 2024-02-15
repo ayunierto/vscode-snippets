@@ -41,5 +41,79 @@
 			"}"
 		],
 		"description": "Create react hook"
+	},
+	"Crear un slice de redux": {
+		"prefix": "redux-slice",
+		"body": [
+			"import { createSlice } from '@reduxjs/toolkit';",
+			"",
+			"export const ${TM_FILENAME_BASE} = createSlice({",
+			"    name: '${TM_FILENAME_BASE}$1',",
+			"    initialState: {",
+			"        ${2:counter: 10}",
+			"    },",
+			"    reducers: {",
+			"        ${3:increment}: (state, /* action */ ) => {",
+			"            state.counter += 1;",
+			"        },",
+			"    }",
+			"});",
+			"",
+			"",
+			"// Action creators are generated for each case reducer function",
+			"export const { ${3:increment} } = ${TM_FILENAME_BASE}.actions;"
+		],
+		"description": "Crear un slice de redux"
+	},
+
+	"Custom hook para manejo de formularios": {
+		"prefix": "useForm",
+		"body": [
+			"import { useState } from 'react';",
+			"",
+			"export const useForm = ( initialForm = {} ) => {",
+			"  ",
+			"    const [ formState, setFormState ] = useState( initialForm );",
+			"",
+			"    const onInputChange = ({ target }) => {",
+			"        const { name, value } = target;",
+			"        setFormState({",
+			"            ...formState,",
+			"            [ name ]: value",
+			"        });",
+			"    }",
+			"",
+			"    const onResetForm = () => {",
+			"        setFormState( initialForm );",
+			"    }",
+			"",
+			"    return {",
+			"        ...formState,",
+			"        formState,",
+			"        onInputChange,",
+			"        onResetForm,",
+			"    }",
+			"}"
+		],
+		"description": "Custom hook para manejo de formularios"
+	},
+	"Crear funcion de flecha": {
+		"prefix": "aff",
+		"body": [
+			"const ${1:name} = ($2) => {",
+			"    $3",
+			"}",
+		],
+		"description": "Crear una funcion de flecha"
+	},
+	,
+	"Requerir paquete de node.js": {
+		"prefix": "areq",
+		"body": [
+			"const ${2:name} = require('$1');",
+		],
+		"description": "Requerir paquete de node.js"
 	}
+
+	
 }
