@@ -106,7 +106,6 @@
 		],
 		"description": "Crear una funcion de flecha"
 	},
-	,
 	"Requerir paquete de node.js": {
 		"prefix": "areq",
 		"body": [
